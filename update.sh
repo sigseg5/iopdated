@@ -1,6 +1,7 @@
 #!/bin/bash
 
 fonts=/home/$USER/.local/share/fonts/
+font_major_ver=16
 
 # Check for fonts folder existence
 if [[ ! -f $fonts ]]
@@ -11,7 +12,7 @@ fi
 
 # Download latest archive
 curl -s https://api.github.com/repos/be5invis/Iosevka/releases/latest | \
-    grep "browser_download_url.*ttc-iosevka-16*" |\
+    grep "browser_download_url.*ttc-iosevka-${font_major_ver}*" |\
     cut -d : -f 2,3 | grep -v "super" | tr -d \" |\
     wget -qi -
 
