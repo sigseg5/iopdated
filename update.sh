@@ -4,7 +4,7 @@ fonts=/home/$USER/.local/share/fonts/
 font_major_ver=16
 
 # Check for fonts folder existence
-if [[ ! -f $fonts ]]
+if [[ ! -d $fonts ]]
 then
     echo "Fonts folder not found at ${fonts}, creating…"
     mkdir -p $fonts
