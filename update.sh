@@ -1,7 +1,7 @@
 #!/bin/bash
 
 fonts=/home/$USER/.local/share/fonts/
-font_major_ver=17
+font_major_ver=26
 
 # Check for fonts folder existence
 if [[ ! -d $fonts ]]
